@@ -1,5 +1,7 @@
 package array;
 
+import java.util.Arrays;
+
 public class ArrayOfArray {
 
     private int numb = 5;
@@ -8,8 +10,8 @@ public class ArrayOfArray {
 
     public void calculate(){
         serialNumber =0;
-    for(int i = 0; i<numb;i++){
-        for(int j = 0; j< numb;j++){
+        for(int i = 0; i<numb;i++){
+            for(int j = 0; j< numb;j++){
                 serialNumber++;
                 array[i][j] = serialNumber;
                 System.out.print(array[i][j] + " ");
@@ -53,6 +55,11 @@ public class ArrayOfArray {
         System.out.println(arrayOfArray.isItZero());
         System.out.println();
         arrayOfArray.calculateWithZero();
+        System.out.println();
+        System.out.println(arrayOfArray.isItZero());
+        System.out.println();
+        arrayOfArray.array[3][0] = 2;
+        System.out.println(Arrays.deepToString(arrayOfArray.array));
         System.out.println();
         System.out.println(arrayOfArray.isItZero());
     }
