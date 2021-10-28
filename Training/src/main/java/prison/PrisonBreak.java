@@ -8,7 +8,7 @@ public class PrisonBreak {
     List<Integer> openedDoors = new ArrayList<>();
 
     public List<Integer> openTheDoors(){
-        for(int i = 1; i<=numberOfDoors;i++){
+        for(int i = 1; i<numberOfDoors;i++){
             if(i*i<=numberOfDoors) {
                 openedDoors.add(i * i);
             }
