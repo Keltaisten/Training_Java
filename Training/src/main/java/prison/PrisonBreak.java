@@ -13,18 +13,21 @@ public class PrisonBreak {
             doors.set(i, false);
         }
     }
-    public List<Boolean> isItOpen(){
-        for(int i = 0; i<numberOfDoors;i++){
-            if(i*i<numberOfDoors)
-                openDoors.add(i*i);
+    public void openTheDoors(){
+        for(int i = 1; i<numberOfDoors;i++){
+            if(i*i<numberOfDoors) {
+                openDoors.add(i * i);
+            }
         }
-        return doors;
+//        return openDoors;
     }
 
 
     public static void main(String[] args) {
         PrisonBreak prisonBreak = new PrisonBreak();
-        prisonBreak.closeTheDoors();
+//        prisonBreak.closeTheDoors();
+        prisonBreak.openTheDoors();
+        System.out.println(prisonBreak.openDoors);
 
 
     }
